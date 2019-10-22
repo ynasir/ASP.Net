@@ -1,0 +1,39 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Mortgage_Calculator.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <h1>Mortgage Calculator</h1>
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem Text="Calculate Mortgage" NavigateUrl="~/WebForm1.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="List Mortgages" NavigateUrl="~/WebForm2.aspx"></asp:MenuItem>
+                <asp:MenuItem Text="Clear Mortgages" NavigateUrl="~/WebForm3.aspx"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+         <Scripts>
+             <asp:ScriptReference Name="jquery" />
+         </Scripts>
+        </asp:ScriptManager>
+
+        <div style="margin: 20px 0px 20px 0px">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>               
+                <asp:Label ID="TimeofDay" runat="server" Text=""></asp:Label>
+                <asp:Timer ID="Timer1" OnTick="Unnamed_Tick" Interval="1000" runat="server"></asp:Timer>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+    </form>
+</body>
+</html>
