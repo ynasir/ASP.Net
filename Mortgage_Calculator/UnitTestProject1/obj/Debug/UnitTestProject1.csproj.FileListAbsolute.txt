@@ -1,2 +1,17 @@
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\bin\Debug\UnitTestProject1.dll
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\bin\Debug\UnitTestProject1.pdb
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\bin\Debug\Mortgage_Calculator.dll
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\bin\Debug\Mortgage_Calculator.pdb
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\bin\Debug\Mortgage_Calculator.dll.config
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
 C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\obj\Debug\UnitTestProject1.csprojAssemblyReference.cache
 C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CoreCompileInputs.cache
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CopyComplete
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\obj\Debug\UnitTestProject1.dll
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\obj\Debug\UnitTestProject1.pdb

@@ -160,7 +160,6 @@ C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\Mortgage_Calculator\bin\
 C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\Mortgage_Calculator\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\Mortgage_Calculator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\Mortgage_Calculator\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\Mortgage_Calculator\obj\Debug\Mortgage_Calculator.csprojAssemblyReference.cache
 C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\Mortgage_Calculator\obj\Debug\Mortgage_Calculator.csproj.CoreCompileInputs.cache
 C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\Mortgage_Calculator\obj\Debug\Mortgage_Calculator.csproj.CopyComplete
 C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\Mortgage_Calculator\obj\Debug\Mortgage_Calculator.dll

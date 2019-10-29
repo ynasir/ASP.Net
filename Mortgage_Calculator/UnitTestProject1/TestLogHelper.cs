@@ -59,8 +59,8 @@ namespace UnitTestProject1
 
                     mortgageInfo.MortgageString = items[mortgageString];
                     mortgageInfo.Principal = double.Parse(items[principal]);
-                    mortgageInfo.Interest = double.Parse(items[interest]);
-                    mortgageInfo.NoOfYears = double.Parse(items[years]);
+                    mortgageInfo.InterestRate = double.Parse(items[interest]);
+                    mortgageInfo.DurationYears = double.Parse(items[years]);
                     mortgageInfo.MonthlyPayment = double.Parse(items[monthlypayment]);
 
                     mortgageList.Add(mortgageInfo);
