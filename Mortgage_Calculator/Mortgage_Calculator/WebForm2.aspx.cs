@@ -12,19 +12,12 @@ namespace Mortgage_Calculator
 
         private void BindData()
         {
-            IIOHelper ioHelper = new LogHelper();
+            IIOHelper ioHelper = new DatabaseIOHelper();
 
             var mortgageInfoList = new List<MortageInfo>();
             mortgageInfoList = ioHelper.GetAllMortgages();
 
-            var mortgageStringList = new List<string>();
-
-            foreach (var mortgageInfo in mortgageInfoList)
-            {
-                mortgageStringList.Add(mortgageInfo.MortgageString);
-            }
-
-            GridView1.DataSource = mortgageStringList;
+            GridView1.DataSource = mortgageInfoList;
             GridView1.DataBind();
         }
     }

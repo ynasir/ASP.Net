@@ -1,0 +1,2 @@
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\obj\Debug\UnitTestProject1.csprojAssemblyReference.cache
+C:\Users\13125\source\repos\ASP.Net\Mortgage_Calculator\UnitTestProject1\obj\Debug\UnitTestProject1.csproj.CoreCompileInputs.cache

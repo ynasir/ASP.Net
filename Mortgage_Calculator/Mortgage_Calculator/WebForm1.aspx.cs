@@ -118,7 +118,7 @@ namespace Mortgage_Calculator
         {   
             string outputtext = $"With a principal of ${_prinicipal}, duration of {_years} years and an interest rate of {_rate}%, the monthly loan payment amount is ${_monthlypayment}";
 
-            IIOHelper ioHelper = new LogHelper();
+            IIOHelper ioHelper = new DatabaseIOHelper();
 
             ioHelper.AddMortgage(outputtext, _prinicipal, _rate, _years, _monthlypayment);
         }

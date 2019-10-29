@@ -1,5 +1,4 @@
-﻿using Mortgage_Calculator;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
@@ -8,7 +7,7 @@ using System.Web;
 
 namespace Mortgage_Calculator
 {
-    public class LogHelper : IIOHelper
+    public class FileIOHelper : IIOHelper
     {
         public List<MortageInfo> GetAllMortgages()
         {
@@ -19,7 +18,7 @@ namespace Mortgage_Calculator
             var mortgageList = new List<MortageInfo>();
 
             try
-            { 
+            {
                 foreach (var line in File.ReadAllLines(filename))
                 {
                     string[] items = line.Split(';');
@@ -50,7 +49,7 @@ namespace Mortgage_Calculator
             string message = $"{data};{principal};{interest};{years};{monthlypayment};";
 
             try
-            { 
+            {
                 File.AppendAllText(filename, message + "\n");
             }
             catch (IOException ex)
@@ -64,8 +63,8 @@ namespace Mortgage_Calculator
             string filename = GetServerMapPath();
 
             try
-            { 
-                 File.WriteAllText(filename, String.Empty);
+            {
+                File.WriteAllText(filename, String.Empty);
             }
             catch (IOException ex)
             {

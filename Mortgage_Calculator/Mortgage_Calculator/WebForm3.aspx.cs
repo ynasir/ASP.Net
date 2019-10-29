@@ -11,7 +11,7 @@ namespace Mortgage_Calculator
 
         protected void btn_clear_Click(object sender, EventArgs e)
         {
-            IIOHelper ioHelper = new LogHelper();
+            IIOHelper ioHelper = new DatabaseIOHelper();
             ioHelper.ClearMortgages();
         }
     }
