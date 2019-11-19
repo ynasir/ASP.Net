@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Mortgage_Calculator.Models;
+using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
-using System.Data.SqlClient;
-using System.Configuration;
 
 namespace Mortgage_Calculator
 {
@@ -41,7 +42,7 @@ namespace Mortgage_Calculator
                         {
                             throw new Exception("Unable to add to database");
                         }
-                    }                        
+                    }
                 }
 
             }

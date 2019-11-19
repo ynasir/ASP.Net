@@ -12,7 +12,7 @@ namespace Mortgage_Calculator.Tests
         [TestMethod]
         public void InitialTestOnHttpPost_AfterPopulatingValidData_ReturnsValidData()
         {
-            var mortgageinfo = new MortgageInfo();
+            var mortgageinfo = new MortgageModelInfo();
             mortgageinfo.Principal = 1000;
             mortgageinfo.DurationYears = 3;
             mortgageinfo.InterestRate = 2;
@@ -27,7 +27,7 @@ namespace Mortgage_Calculator.Tests
         [TestMethod]
         public void TestOnHttpPost_AfterPopulatingValidData_ReturnsValidData()
         {
-            var mortgageinfo = new MortgageInfo();
+            var mortgageinfo = new MortgageModelInfo();
             mortgageinfo.Principal = 1000;
             mortgageinfo.DurationYears = 2.5;
             mortgageinfo.InterestRate = 65;
@@ -43,7 +43,7 @@ namespace Mortgage_Calculator.Tests
         [TestMethod]
         public void TestMortgageHelper()
         {
-            var mortgageinfo = new MortgageInfo();
+            var mortgageinfo = new MortgageModelInfo();
             mortgageinfo.Principal = 1300;
             mortgageinfo.DurationYears = 2.75;
             mortgageinfo.InterestRate = 32;

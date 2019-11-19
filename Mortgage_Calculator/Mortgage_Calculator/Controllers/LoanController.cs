@@ -9,6 +9,8 @@ namespace Mortgage_Calculator.Controllers
 {
     public class LoanController : Controller
     {
+        IIOHelper iOHelper = new DatabaseIOHelper();
+
         // GET: Loan
         public ActionResult Index()
         {
@@ -16,15 +18,18 @@ namespace Mortgage_Calculator.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index([Bind(Include = "Principal,InterestRate,DurationYears")] MortgageInfo mortgageInfo)
+        public ActionResult Index([Bind(Include = "Principal,InterestRate,DurationYears")] MortgageModelInfo mortgageInfo)
         {
             if (ModelState.IsValid)
             {
                 double monthlyPayment = new MortgageHelper(mortgageInfo.Principal, mortgageInfo.InterestRate,
                     mortgageInfo.DurationYears).ComputeMothlyPayment();
 
-                ViewBag.Message = $"With a principal of ${mortgageInfo.Principal}, duration of {mortgageInfo.DurationYears} years and an interest rate of {mortgageInfo.InterestRate}%, the monthly loan payment amount is ${monthlyPayment}";
+                string formattedString = $"With a principal of ${mortgageInfo.Principal}, duration of {mortgageInfo.DurationYears} years and an interest rate of {mortgageInfo.InterestRate}%, the monthly loan payment amount is ${monthlyPayment}";
 
+                ViewBag.Message = formattedString;
+                iOHelper.AddMortgage(formattedString, mortgageInfo.Principal, mortgageInfo.InterestRate,
+                    mortgageInfo.DurationYears, monthlyPayment);
 
                 return View("Details");
             }
@@ -32,6 +37,29 @@ namespace Mortgage_Calculator.Controllers
             {
                 return View("Index", mortgageInfo);
             }
+        }
+
+        public ActionResult List()
+        {
+            List<MortageInfo> mortgageInfos = iOHelper.GetAllMortgages();
+
+
+            return View("List", mortgageInfos);
+        }
+
+        public ActionResult Delete()
+        {
+            return View("Delete");
+        }
+
+        [HttpPost]
+        public ActionResult DeletePost()
+        {
+            iOHelper.ClearMortgages();
+
+            ViewBag.Message = "Mortgage data has been cleared succesfully";
+
+            return View("Delete");
         }
     }
 }

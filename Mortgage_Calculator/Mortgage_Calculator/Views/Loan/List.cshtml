@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Mortgage_Calculator.Models.MortageInfo>
+
+@{
+    ViewBag.Title = "View Monthly Payments";
+}
+
+<h2>List Monthly Payments</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Principal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InterestRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DurationYears)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MonthlyPayment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MortgageString)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Principal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InterestRate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DurationYears)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MonthlyPayment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MortgageString)
+        </td>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+        </td>
+    </tr>
+}
+
+</table>

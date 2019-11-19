@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Clear Mortgage Data";
+}
+
+<h2>Clear Mortgages</h2>
+
+<div>
+    <h5>@ViewBag.Message</h5>
+</div>
+
+@using (Html.BeginForm("DeletePost", "Loan"))
+{
+    @Html.AntiForgeryToken();
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Delete" class="btn btn-default" />
+        </div>
+    </div>
+}
+
