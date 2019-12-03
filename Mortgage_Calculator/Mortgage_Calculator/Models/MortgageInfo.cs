@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace Mortgage_Calculator.Models
+﻿namespace Mortgage_Calculator.Models
 {
     public class MortageInfo
     {

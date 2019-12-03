@@ -1,9 +1,5 @@
-﻿using System;
+﻿using Mortgage_Calculator.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Mortgage_Calculator.Models;
 
 namespace Mortgage_Calculator
 {

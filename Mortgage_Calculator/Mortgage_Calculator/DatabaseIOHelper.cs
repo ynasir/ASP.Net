@@ -3,8 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
+using System.Runtime.ExceptionServices;
 
 namespace Mortgage_Calculator
 {
@@ -48,7 +47,7 @@ namespace Mortgage_Calculator
             }
             catch (Exception ex)
             {
-                throw ex;
+                ExceptionDispatchInfo.Capture(ex).Throw();
             }
         }
 
@@ -76,7 +75,7 @@ namespace Mortgage_Calculator
             }
             catch (Exception ex)
             {
-                throw ex;
+                ExceptionDispatchInfo.Capture(ex).Throw();
             }
         }
 
@@ -114,7 +113,6 @@ namespace Mortgage_Calculator
                 }
 
                 return mortgageList;
-
             }
             catch (Exception ex)
             {

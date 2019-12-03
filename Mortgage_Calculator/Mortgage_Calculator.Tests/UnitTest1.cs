@@ -1,8 +1,7 @@
-﻿using System;
-using System.Web.Mvc;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Mortgage_Calculator.Controllers;
 using Mortgage_Calculator.Models;
+using System.Web.Mvc;
 
 namespace Mortgage_Calculator.Tests
 {
@@ -21,7 +20,9 @@ namespace Mortgage_Calculator.Tests
             ViewResult result = loanController.Index(mortgageinfo) as ViewResult;
             string message = result.ViewBag.Message;
 
-            Assert.AreEqual("With a principal of $1000, duration of 3 years and an interest rate of 2%, the monthly loan payment amount is $28.64", message);
+            Assert.AreEqual("With a principal of $1000, duration of 3 years" +
+                " and an interest rate of 2%, the monthly" +
+                " loan payment amount is $28.64", message);
         }
 
         [TestMethod]

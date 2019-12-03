@@ -1,8 +1,5 @@
 ﻿using Mortgage_Calculator.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace Mortgage_Calculator.Controllers
@@ -10,6 +7,7 @@ namespace Mortgage_Calculator.Controllers
     public class LoanController : Controller
     {
         IIOHelper iOHelper = new DatabaseIOHelper();
+        LoanAPIController loanAPIController = new LoanAPIController();
 
         // GET: Loan
         public ActionResult Index()
@@ -18,31 +16,25 @@ namespace Mortgage_Calculator.Controllers
         }
 
         [HttpPost]
-        public ActionResult Index([Bind(Include = "Principal,InterestRate,DurationYears")] MortgageModelInfo mortgageInfo)
+        public ActionResult Index([Bind(Include = "Principal,InterestRate,DurationYears")] MortgageModelInfo mortgageModelInfo)
         {
             if (ModelState.IsValid)
             {
-                double monthlyPayment = new MortgageHelper(mortgageInfo.Principal, mortgageInfo.InterestRate,
-                    mortgageInfo.DurationYears).ComputeMothlyPayment();
+                var mortgageInfo = loanAPIController.GetMonthlyPayment(mortgageModelInfo);
 
-                string formattedString = $"With a principal of ${mortgageInfo.Principal}, duration of {mortgageInfo.DurationYears} years and an interest rate of {mortgageInfo.InterestRate}%, the monthly loan payment amount is ${monthlyPayment}";
+                ViewBag.Message = mortgageInfo.MortgageString;
 
-                ViewBag.Message = formattedString;
-                iOHelper.AddMortgage(formattedString, mortgageInfo.Principal, mortgageInfo.InterestRate,
-                    mortgageInfo.DurationYears, monthlyPayment);
-
-                return View("Details");
+                return View("Details", mortgageInfo);
             }
             else
             {
-                return View("Index", mortgageInfo);
+                return View("Index", mortgageModelInfo);
             }
         }
 
         public ActionResult List()
         {
-            List<MortageInfo> mortgageInfos = iOHelper.GetAllMortgages();
-
+            List<MortageInfo> mortgageInfos = loanAPIController.GetMortgagesList();
 
             return View("List", mortgageInfos);
         }
@@ -55,7 +47,7 @@ namespace Mortgage_Calculator.Controllers
         [HttpPost]
         public ActionResult DeletePost()
         {
-            iOHelper.ClearMortgages();
+            loanAPIController.DeleteMortgages();
 
             ViewBag.Message = "Mortgage data has been cleared succesfully";
 
